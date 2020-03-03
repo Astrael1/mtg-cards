@@ -1,0 +1,33 @@
+<ul>
+    <li *ngFor="let card of cards">
+        <div class="card-tab" *ngIf="!card.card_faces">
+            <div *ngIf="card.image_uris" class="card-image">
+                <img src="{{card.image_uris.small}}">
+            </div>
+            <div *ngIf="!card.card_faces" class="card-details">
+                <h1>{{card.name}}</h1>
+                <p>{{card.oracle_text}}</p>
+            </div>
+        </div>
+        <div *ngIf="card.card_faces" class="card-tab-double-face">
+            <div class="card-face">
+                <div class="card-image">
+                    <img src="{{card.card_faces[0].image_uris.small}}">
+                </div>
+                <div class="card-details">
+                    <h1>{{card.card_faces[0].name}}</h1>
+                    <p>{{card.card_faces[0].oracle_text}}</p>
+                </div>
+            </div>
+            <div class="card-face">
+                <div class="card-image">
+                    <img src="{{card.card_faces[1].image_uris.small}}">
+                </div>
+                <div class="card-details">
+                    <h1>{{card.card_faces[1].name}}</h1>
+                    <p>{{card.card_faces[1].oracle_text}}</p>
+                </div>
+            </div>            
+        </div>
+    </li>
+</ul>
