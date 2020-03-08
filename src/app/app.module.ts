@@ -9,17 +9,20 @@ import { CardListComponent } from './components/card-list/card-list.component';
 import { MessagesComponent } from './components/messages/messages.component';
 
 import { from } from 'rxjs';
+import { AdvancedCardSearchComponent } from './components/advanced-card-search/AdvancedCardSearchComponent';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardListComponent,
     CardsComponent,
-    MessagesComponent
+    MessagesComponent,
+    AdvancedCardSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
