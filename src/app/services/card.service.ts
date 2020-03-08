@@ -14,9 +14,9 @@ export class CardService {
 
   constructor( private messageService: MessageService) { }
 
-  getCards(): Promise<Card[]>
+  getCards(query: string): Promise<Card[]>
   {
-    return Cards.search("name:liliana")
+    return Cards.search(query)
       .on("end", ()=> this.messageService.add("cards found"))
       .waitForAll();
   }

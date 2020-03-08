@@ -15,7 +15,7 @@ export class CardsComponent implements OnInit
 
   getCards(): void
   {
-    this.cardService.getCards().then(result => this.cards = result);
+    this.cardService.getCards("name:gideon").then(result => this.cards = result);
   }
 
   constructor( private cardService: CardService, private message: MessageService) { }
